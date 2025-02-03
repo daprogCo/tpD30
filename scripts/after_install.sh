@@ -4,6 +4,6 @@
 cd /app
 
 # install dependencies
-npm ci
+npm install
 npm run build
 cp -r build/* /var/www/html
