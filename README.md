@@ -1,46 +1,36 @@
-# Getting Started with Create React App
+# Déploiement d'un pipeline CI/CD sur AWS pour une application ReactJS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
 
-## Available Scripts
+Le CI/CD (Continuous Integration / Continuous Deployment) est un ensemble de processus automatisés qui facilitent le développement, les tests et le déploiement des applications logicielles. Il s'agit d'un élément essentiel des pratiques de développement modernes, permettant aux équipes de livrer des changements de code plus fréquemment, de manière fiable et avec une meilleure qualité.
 
-In the project directory, you can run:
+## Étapes pour créer un pipeline CI/CD
 
-### `npm start`
+1. **Choisir un projet à déployer sur GitHub**
+2. **Créer des rôles IAM pour EC2 et CodeDeploy**
+3. **Créer une instance EC2 (attacher le rôle IAM, ajouter un utilisateur, installer l'agent CodeDeploy)**
+4. **Créer AWS CodePipeline**
+5. **Créer AWS CodeBuild**
+6. **Créer AWS CodeDeploy**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Projet GitHub
 
-### `npm test`
+Afin d'établir et de valider efficacement un pipeline CI/CD, plusieurs étapes essentielles doivent être suivies. Il est important de comprendre les particularités du projet, telles que le langage de programmation et le framework utilisés.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Les projets **frontend** utilisent souvent des frameworks comme **ReactJS, VueJS ou AngularJS**.
+- Les projets **backend** reposent sur des frameworks comme **Django, Flask ou SpringBoot**.
 
-### `npm run build`
+Les différences entre ces frameworks impliquent des approches distinctes pour le déploiement. Ainsi, un **ingénieur DevOps** doit bien comprendre les exigences de chaque framework avant de créer un pipeline CI/CD. Cela garantit une intégration et un déploiement fluides.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+📌 **Lien vers le projet GitHub** : [tpD30](https://github.com/daprogCo/tpD30.git)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Cloner et pousser le projet sur GitHub
 
-### `npm run eject`
+Pour tester le pipeline CI/CD, il faut cloner et pousser le projet dans votre propre **repository GitHub**.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+git clone https://github.com/daprogCo/tpD30.git
