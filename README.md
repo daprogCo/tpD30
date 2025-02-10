@@ -57,5 +57,46 @@ Ces rôles permettront à EC2 d'accéder à S3 et à CodeDeploy de gérer les d�
    sudo service codedeploy-agent status
    ```
 
-## 
+## Création du pipeline CI/CD avec AWS CodePipeline, CodeBuild et CodeDeploy
+
+### AWS CodePipeline
+
+AWS **CodePipeline** est un service de CI/CD permettant d'automatiser le processus de **build, test et déploiement**.
+
+- **Créer un pipeline** depuis **AWS CodePipeline**.
+- **Connecter le pipeline à GitHub**.
+
+### AWS CodeBuild
+
+- **Créer un projet CodeBuild**.
+- **Définir le fichier `buildspec.yml`** (ou entrer les commandes de build dans la console AWS).
+
+### AWS CodeDeploy
+
+AWS **CodeDeploy** est un service qui automatise le déploiement des applications sur **EC2**.
+
+---
+
+### Fichier `appspec.yml`
+
+Le fichier **`appspec.yml`** est utilisé par **CodeDeploy** pour définir les étapes du **déploiement**.
+
+---
+
+### Créer l'application CodeDeploy
+
+1. **Naviguer vers AWS CodeDeploy** et **créer une application** avec un **groupe de déploiement**.
+2. **Sélectionner le rôle IAM** que nous avons créé pour **CodeDeploy**.
+3. **Connecter CodeDeploy à CodePipeline** et **finaliser la configuration**.
+
+---
+
+### Vérifier le déploiement
+
+Après la création du pipeline :
+
+- **Vérifier les logs de déploiement** sur **CodeDeploy**.
+- **Consulter le bucket S3** où les **artifacts** sont stockés.
+- **Se connecter à l'instance EC2** et copier l'**adresse IP publique**.
+- **Ouvrir un navigateur et accéder à l'application ReactJS**.
 
