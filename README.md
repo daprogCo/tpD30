@@ -41,4 +41,21 @@ git clone https://github.com/daprogCo/tpD30.git
 
 Ces rôles permettront à EC2 d'accéder à S3 et à CodeDeploy de gérer les déploiements sur l'instance EC2.
 
+## Lancer une instance EC2
+
+1. **Créer une instance EC2 (dans ce projet, nous utiliserons un serveur Ubuntu).**
+2. ** Attacher le rôle IAM créé précédemment pour EC2.**
+3. **Se connecter à l'instance via AWS Management Console et exécuter les commandes suivantes :**
+   ```bash
+   sudo adduser ec2-user
+   ```
+4. **Installer l'agent CodeDeploy en suivant les instructions d'AWS :**
+   📌 [Documentation officielle](https://docs.aws.amazon.com/codedeploy/latest/userguide/codedeploy-agent-operations-install-ubuntu.html)
+
+6. **Vérifier le statut de l’agent CodeDeploy :**
+      ```bash
+   sudo service codedeploy-agent status
+   ```
+
+## 
 
