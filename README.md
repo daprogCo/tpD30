@@ -91,7 +91,7 @@ Le fichier **`appspec.yml`** est utilisé par **CodeDeploy** pour définir les �
 
 ---
 
-### Vérifier le déploiement
+## Vérifier le déploiement
 
 Après la création du pipeline :
 
