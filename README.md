@@ -8,7 +8,7 @@ Le CI/CD (Continuous Integration / Continuous Deployment) est un ensemble de pro
 
 1. **Choisir un projet à déployer sur GitHub**
 2. **Créer des rôles IAM pour EC2 et CodeDeploy**
-3. **Créer une instance EC2 (attacher le rôle IAM, ajouter un utilisateur, installer l'agent CodeDeploy)**
+3. **Créer une instance EC2**
 4. **Créer AWS CodePipeline**
 5. **Créer AWS CodeBuild**
 6. **Créer AWS CodeDeploy**
@@ -24,8 +24,6 @@ Afin d'établir et de valider efficacement un pipeline CI/CD, plusieurs étapes 
 
 Les différences entre ces frameworks impliquent des approches distinctes pour le déploiement. Ainsi, un **ingénieur DevOps** doit bien comprendre les exigences de chaque framework avant de créer un pipeline CI/CD. Cela garantit une intégration et un déploiement fluides.
 
-📌 **Lien vers le projet GitHub** : [tpD30](https://github.com/daprogCo/tpD30.git)
-
 ---
 
 ## Cloner et pousser le projet sur GitHub
@@ -34,3 +32,13 @@ Pour tester le pipeline CI/CD, il faut cloner et pousser le projet dans votre pr
 
 ```bash
 git clone https://github.com/daprogCo/tpD30.git
+```
+
+## Création des rôles IAM
+
+1. **Créer un rôle IAM pour EC2 et y attacher une politique permettant l'accès à S3.**
+2. **Créer un rôle IAM pour CodeDeploy et y attacher la politique AmazonEC2RoleforAWSCodeDeploy.**
+
+Ces rôles permettront à EC2 d'accéder à S3 et à CodeDeploy de gérer les déploiements sur l'instance EC2.
+
+
